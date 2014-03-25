@@ -1,3 +1,3 @@
 module.exports = function(request, response) {
-	response.send('hey team!!');
+	response.send('hey from Tom!!');
 };
