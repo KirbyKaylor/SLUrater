@@ -5,26 +5,6 @@ var bcrypt = require('bcrypt');
 // Access the database
 var db = mongojs('loginapp', ['users']);
 
-// Register a new user
-module.exports.create = function(name, password, callback) {
-    
-    bcrypt.hash(password, 10, function(error,hash) {
-        if (error) throw error;
-        
-        db.users.findAndModify({
-            query: {name:name},
-            update: {$setOnInsert:{password:hash}},
-            new: true,
-            upsert: true
-            
-        }, function(error, user) {
-            if (error) throw error;
-            
-            callback(user.password == hash);
-        });
-    });
-};
-
 // Verify login credentials
 module.exports.retrieve = function(name, password, callback) {
     
