@@ -3,7 +3,7 @@ var mongojs = require('mongojs');
 var bcrypt = require('bcrypt');
 
 // Access the database
-var db = mongojs('loginapp', ['users']);
+var db = mongojs('SLUrater', ['users']);
 
 // Register a new user
 module.exports.create = function(name, password, callback) {
