@@ -17,6 +17,6 @@ module.exports = function(request,response) {
             request.session.error = 'Username '+name+' is not available.';
         }
         
-        response.redirect('/login');
+        response.redirect('/');
     });
 };
