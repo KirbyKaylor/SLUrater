@@ -1,5 +1,7 @@
 // Server for SLUrater
 var express = require('express');
+
+// Create a server
 var app = express();
 
 // Configure the server
@@ -10,14 +12,14 @@ app.use(express.static(__dirname+'/statics'));
 
 // Enable sessions
 app.use(express.cookieParser());
-app.use(express.session({secret:'This session'}));
+app.use(express.session({secret:'SLUrater session'}));
 
 // Route the requests
-//app.get('/', require('./routes/'));
-app.post('/register', require('./routes/register'));
+app.get('/', require('./routes/index'));
 app.post('/login', require('./routes/login'));
-//app.get('/logout', require('./routes/logout'));
-//app.get('*', require('./routes/default'));
+app.post('/register', require('./routes/register'));
+app.get('/profile', require('./routes/profile'));
+app.get('/logout', require('./routes/logout'));
 
 // Default route
 app.get('*', function(request,response) {
@@ -27,6 +29,3 @@ app.get('*', function(request,response) {
 // Start the server
 app.listen(8080);
 console.log('Server is up.');
-
-
-
