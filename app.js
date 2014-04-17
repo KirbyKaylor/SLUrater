@@ -20,7 +20,10 @@ app.post('/login', require('./routes/login'));
 app.post('/register', require('./routes/register'));
 app.get('/profile', require('./routes/profile'));
 app.get('/dining', require('./routes/dining'));
-app.get('/dorms', require('./routes/housing'));
+app.get('/housing', require('./routes/housing'));
+app.get('/buildings', require('./routes/buildings'));
+app.get('/courses', require('./routes/courses'));
+app.get('/events', require('./routes/events'));
 app.get('/logout', require('./routes/logout'));
 
 // Default route
