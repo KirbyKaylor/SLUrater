@@ -19,6 +19,8 @@ app.get('/', require('./routes/index'));
 app.post('/login', require('./routes/login'));
 app.post('/register', require('./routes/register'));
 app.get('/profile', require('./routes/profile'));
+app.get('/dining', require('./routes/dining'));
+app.get('/housing', require('./routes/housing'));
 app.get('/logout', require('./routes/logout'));
 
 // Default route
