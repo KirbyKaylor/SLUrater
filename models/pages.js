@@ -22,41 +22,15 @@ module.exports.createpage = function(name, description, id, category, callback) 
     callback(true);
 };
 
-// Verify login credentials
-module.exports.retrieve = function(category, callback) {
+// Function to get a list of visitors
+module.exports.retrieve = function(callback) {
     
-    db.pages.find({name:name}, function(error, user) {
-                     if (error) throw error;
-                     
-                     if (!user) {
-                     callback(false);
-                     }
-                     
-                     else {
-                     bcrypt.compare(password, user.password, function(error, success) {
-                                    if (error) throw error;
-                                    
-                                    callback(success);
-                                    })
-                     }
-                     });
+    db.pages.find({}, function(error,names) {
+        if (error) throw error;
+        
+        callback(names);
+    });
 };
-
-// Delete all users
-module.exports.deleteAll = function(callback){
-    db.users.remove({}, function(error) {
-                    if (error) throw error;
-                    callback();
-                    });
-};
-
-// Close the connection
-module.exports.close = function(callback){
-    db.close(function(error) {
-             if (error) throw error;
-             callback();
-             });
-}
 
 
 
