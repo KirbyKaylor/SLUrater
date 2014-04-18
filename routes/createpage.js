@@ -1,14 +1,14 @@
 // Registration page: try to register
 var users = require('../models/pages');
-var validator = require('validator');
 
 module.exports = function(request,response) {
     
     var name = request.body.name;
     var description = request.body.description;
     var id = request.body.id;
+    var category = request.body.category;
     
-    users.createpage(name, description, id, function(success) {
+    users.createpage(name, description, id, category, function(success) {
                  
                  if (success) {
                      //response.render('asdflkj');

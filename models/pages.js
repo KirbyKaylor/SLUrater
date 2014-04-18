@@ -6,13 +6,14 @@ var bcrypt = require('bcrypt');
 var db = mongojs('SLUrater', ['pages']);
 
 // Register a new user
-module.exports.createpage = function(name, description, id, callback) {
+module.exports.createpage = function(name, description, id, category, callback) {
     
 
                 
                 db.pages.insert({
                                 name: name,
                                 description: description,
+                                category: category,
                                 _id: id
                                        
                                        }
@@ -22,9 +23,9 @@ module.exports.createpage = function(name, description, id, callback) {
 };
 
 // Verify login credentials
-module.exports.retrieve = function(name, password, callback) {
+module.exports.retrieve = function(category, callback) {
     
-    db.users.findOne({name:name}, function(error, user) {
+    db.pages.find({name:name}, function(error, user) {
                      if (error) throw error;
                      
                      if (!user) {
