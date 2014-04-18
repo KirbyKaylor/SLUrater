@@ -12,8 +12,8 @@ module.exports.create = function(name, password, callback) {
         if (error) throw error;
         
         db.users.findAndModify({
-            query: {name:name},
-            update: {$setOnInsert:{password:hash}},
+            query: {usernaname:name},
+            update: {$setOnInsert:{password:hash, admin: false, ban: false}},
             new: true,
             upsert: true
             
