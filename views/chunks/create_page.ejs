@@ -1,5 +1,8 @@
-<form id="create" method="get" action="/create_form">
-    <fieldset>
-    <input id="createPage" type="submit" value="Create a Page">
-    </fieldset>
+
+<form method="post" action="/createPage">
+                  <input type="text" name="name" placeholder="Page Name" required>
+                  <input type="text" name="description" placeholder="Description" required>
+                  <input type="text" name="category" placeholder="Category" required>
+                  <input type="text" name="id" placeholder="Page ID Number" required>
+                  <input type="submit">
 </form>
