@@ -18,7 +18,6 @@ app.use(express.session({secret:'SLUrater session'}));
 app.get('/', require('./routes/index'));
 app.post('/login', require('./routes/login'));
 app.post('/register', require('./routes/register'));
-app.post('/createpage', require('./routes/createpage'));
 app.get('/profile', require('./routes/profile'));
 app.get('/dining', require('./routes/dining'));
 app.get('/housing', require('./routes/housing'));

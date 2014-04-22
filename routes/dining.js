@@ -1,10 +1,8 @@
 // Dining services route
 
 module.exports = function(request,response) {
-    //
-    //var username = request.session.username;
-    //
-    //if (username) {
+
+// need to get the item id number
         response.render('dining')
 
 };
