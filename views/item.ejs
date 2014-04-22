@@ -1,0 +1,15 @@
+<% include chunks/head %>
+
+<p>Display page content</p>
+
+<form id="create" method="post" action="/submitcomment">
+    <fieldset>
+    <legend> Write comment </legend>
+    <input id="comment" type="text" name="content" placeholder="Your comment here">
+    <input id="hideRoute" type="hidden" name="route" value="<%    %>">
+    <input id="post_comment" type="submit">
+    </fieldset>
+</form>
+
+<% include chunks/nav %>
+<% include chunks/foot %>

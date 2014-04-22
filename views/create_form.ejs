@@ -1,0 +1,26 @@
+<% include chunks/head %>
+
+<p>Welcome to Create Your Own Post</p>
+<p>Fill out the form below.</p>
+
+<form id="create" method="post" action="/pages">
+    <fieldset>
+    <legend>Enter post name.</legend>
+    <input id="postName" type="text" name="title" placeholder="Post title here">
+    <legend>Choose post's category.</legend>
+    <select name="categories">
+        <option value="dining">Dining Services</option>
+        <option value="housing">Housing</option>
+        <option value="buildings">Academic Buildings</option>
+        <option value="courses">Courses</option>
+        <option value="events">Campus Events</option>
+    </select>
+    <legend>Enter post content.</legend>
+    <input id="postInfo" type="text" name="info" placeholder="Post content here">
+    <input id="createPage" type="submit">
+    </fieldset>
+</form>
+
+
+<% include chunks/nav %>
+<% include chunks/foot %>
