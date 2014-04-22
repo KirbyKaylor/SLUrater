@@ -25,6 +25,10 @@ app.get('/buildings', require('./routes/buildings'));
 app.get('/courses', require('./routes/courses'));
 app.get('/events', require('./routes/events'));
 app.get('/logout', require('./routes/logout'));
+app.post('submitcomment', require('./routes/submitcomment'));
+app.get('/create_form', require('./routes/create_form'));
+
+
 
 // Default route
 app.get('*', function(request,response) {
