@@ -7,17 +7,12 @@ var db = mongojs('SLUrater', ['pages']);
 
 // Register a new user
 module.exports.createpage = function(name, description, id, category, callback) {
-    
-
-                
-                db.pages.insert({
-                                name: name,
-                                description: description,
-                                category: category,
-                                _id: id
-                                       
-                                       }
-                );
+    db.pages.insert({
+                name: name,
+                description: description,
+                category: category,
+                _id: id
+    });
     
     callback(true);
 };
