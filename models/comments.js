@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     
-    <title>SLUrater/routes/dining.js at master · KirbyKaylor/SLUrater</title>
+    <title>SLUrater/models/comments.js at master · KirbyKaylor/SLUrater</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
@@ -29,7 +29,7 @@
     <meta name="msapplication-TileImage" content="/windows-tile.png" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="selected-link" value="repo_source" data-pjax-transient />
-    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="45066F1C:4A37:1B5E28E:5356AC1C" name="octolytics-dimension-request_id" /><meta content="7061387" name="octolytics-actor-id" /><meta content="tquinlan1992" name="octolytics-actor-login" /><meta content="17b3e421e1fafc6e8b0907c1fee91c19122bf30921f0b5aaeaec620baeb90fb3" name="octolytics-actor-hash" />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="45066F1C:43A0:20521AA:5356AAF1" name="octolytics-dimension-request_id" /><meta content="7061387" name="octolytics-actor-id" /><meta content="tquinlan1992" name="octolytics-actor-login" /><meta content="17b3e421e1fafc6e8b0907c1fee91c19122bf30921f0b5aaeaec620baeb90fb3" name="octolytics-actor-hash" />
     
 
     
@@ -37,7 +37,7 @@
     <link rel="icon" type="image/x-icon" href="https://github.global.ssl.fastly.net/favicon.ico" />
 
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="Pq0fCKA11UK10JwBA6/7lYnZqp1tP9PzK4IpbHgOIALI6J6vyQcy9eWyZZwaxkxYZ+9+7txN4w4onrXAWgOAJA==" name="csrf-token" />
+<meta content="dkxUQFMMtx48q2hJ1eqBvU8MENTEgCsSDjKnywIprGW1V4ZokA9j2bE0FY4Q0Y/PvZM4nZgd5xfX63q/S3WL6Q==" name="csrf-token" />
 
     <link href="https://github.global.ssl.fastly.net/assets/github-032b3c7a54484297af92575eb05cf788e01e9a47.css" media="all" rel="stylesheet" type="text/css" />
     <link href="https://github.global.ssl.fastly.net/assets/github2-84fff2ce527238f195901d5920534eeeb2a47b8c.css" media="all" rel="stylesheet" type="text/css" />
@@ -50,7 +50,7 @@
         
       <meta http-equiv="x-pjax-version" content="23a0e59da73e16faa8fd334ec684661d">
 
-        <link data-pjax-transient rel='permalink' href='/KirbyKaylor/SLUrater/blob/98930a8174a0aaf759fd0dc603ec67caf83cffc9/routes/dining.js'>
+        <link data-pjax-transient rel='permalink' href='/KirbyKaylor/SLUrater/blob/98930a8174a0aaf759fd0dc603ec67caf83cffc9/models/comments.js'>
 
   <meta name="description" content="SLUrater - Rate things at SLU" />
 
@@ -249,7 +249,7 @@
 <ul class="pagehead-actions">
 
     <li class="subscription">
-      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="qeDTJISAMGjuFN98yueX+gokvlibXVkiv8QWgtpoXCcQdTcaAyarP6x4kweEZL6pc1JROZHd2Tam67RLhlo8fg==" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="18110438" />
+      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="5kKOEdSxbXLXAMRqvP40ew5vdPvbQEhz98XBykeI9dMe/wyvsbxyENzV076KmRrezrvBBCajHbOkuMsftmiSaQ==" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="18110438" />
 
     <div class="select-menu js-menu-container js-select-menu">
       <a class="social-count js-social-count" href="/KirbyKaylor/SLUrater/watchers">
@@ -507,7 +507,7 @@
           
 
 
-<!-- blob contrib key: blob_contributors:v21:4fde61dae58745ce8cfbb75823fc0219 -->
+<!-- blob contrib key: blob_contributors:v21:f1dd317220c656b4647d39d841a64d6a -->
 
 <p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
 
@@ -557,7 +557,7 @@
 
             <div class="select-menu-item js-navigation-item selected">
               <span class="select-menu-item-icon octicon octicon-check"></span>
-              <a href="/KirbyKaylor/SLUrater/blob/master/routes/dining.js"
+              <a href="/KirbyKaylor/SLUrater/blob/master/models/comments.js"
                  data-name="master"
                  data-skip-pjax="true"
                  rel="nofollow"
@@ -566,7 +566,7 @@
             </div> <!-- /.select-menu-item -->
         </div>
 
-          <form accept-charset="UTF-8" action="/KirbyKaylor/SLUrater/branches" class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="kgHnlQKZlbfld0BUgq2FWaI3WRbopQbnBSFZMAUbV55py54zvFvZnWvqwMBX8gp5WUIsU4OGtBrZlpCocP4eLg==" /></div>
+          <form accept-charset="UTF-8" action="/KirbyKaylor/SLUrater/branches" class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="1KMOnRbiJeYTWDSVYKIwisRunFOgtvHHxOiflNSEYCud1sgzeaH68/TZFBQpGwXesC6KKrv/9WbN7HJiVJTHJQ==" /></div>
             <span class="octicon octicon-git-branch-create select-menu-item-icon"></span>
             <div class="select-menu-item-text">
               <h4>Create branch: <span class="js-new-item-name"></span></h4>
@@ -574,7 +574,7 @@
             </div>
             <input type="hidden" name="name" id="name" class="js-new-item-value">
             <input type="hidden" name="branch" id="branch" value="master" />
-            <input type="hidden" name="path" id="path" value="routes/dining.js" />
+            <input type="hidden" name="path" id="path" value="models/comments.js" />
           </form> <!-- /.select-menu-item -->
 
       </div> <!-- /.select-menu-list -->
@@ -593,31 +593,17 @@
 </div> <!-- /.select-menu -->
 
   <div class="breadcrumb">
-    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/KirbyKaylor/SLUrater" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">SLUrater</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/KirbyKaylor/SLUrater/tree/master/routes" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">routes</span></a></span><span class="separator"> / </span><strong class="final-path">dining.js</strong> <span aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="routes/dining.js" data-copied-hint="copied!"><span class="octicon octicon-clippy"></span></span>
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/KirbyKaylor/SLUrater" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">SLUrater</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/KirbyKaylor/SLUrater/tree/master/models" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">models</span></a></span><span class="separator"> / </span><strong class="final-path">comments.js</strong> <span aria-label="copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="models/comments.js" data-copied-hint="copied!"><span class="octicon octicon-clippy"></span></span>
   </div>
 </div>
 
 
-  <div class="commit file-history-tease">
-    <img alt="smkoal10" class="main-avatar js-avatar" data-user="7061403" height="24" src="https://avatars2.githubusercontent.com/u/7061403?s=140" width="24" />
-    <span class="author"><a href="/smkoal10" rel="author">smkoal10</a></span>
-    <local-time datetime="2014-04-22T13:27:33-04:00" from="now" title-format="%Y-%m-%d %H:%M:%S %z" title="2014-04-22 13:27:33 -0400">April 22, 2014</local-time>
-    <div class="commit-title">
-        <a href="/KirbyKaylor/SLUrater/commit/29ea72fd658df96fd8d68992c2889f9b13dedeed" class="message" data-pjax="true" title="New stuff">New stuff</a>
-    </div>
+  <div class="commit commit-loader file-history-tease js-deferred-content" data-url="/KirbyKaylor/SLUrater/contributors/master/models/comments.js">
+    Fetching contributors…
 
     <div class="participation">
-      <p class="quickstat"><a href="#blob_contributors_box" rel="facebox"><strong>1</strong>  contributor</a></p>
-      
-    </div>
-    <div id="blob_contributors_box" style="display:none">
-      <h2 class="facebox-header">Users who have contributed to this file</h2>
-      <ul class="facebox-user-list">
-          <li class="facebox-user-list-item">
-            <img alt="smkoal10" class=" js-avatar" data-user="7061403" height="24" src="https://avatars2.githubusercontent.com/u/7061403?s=140" width="24" />
-            <a href="/smkoal10">smkoal10</a>
-          </li>
-      </ul>
+      <p class="loader-loading"><img alt="Octocat-spinner-32-eaf2f5" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" /></p>
+      <p class="loader-error">Cannot retrieve contributors at this time</p>
     </div>
   </div>
 
@@ -628,9 +614,9 @@
         <span class="icon"><b class="octicon octicon-file-text"></b></span>
         <span class="mode" title="File Mode">file</span>
         <span class="meta-divider"></span>
-          <span>8 lines (5 sloc)</span>
+          <span>10 lines (7 sloc)</span>
           <span class="meta-divider"></span>
-        <span>0.151 kb</span>
+        <span>0.247 kb</span>
       </div>
       <div class="actions">
         <div class="button-group">
@@ -639,15 +625,15 @@
                 <span class="octicon octicon-device-desktop"></span> Open
             </a>
                 <a class="minibutton js-update-url-with-hash"
-                   href="/KirbyKaylor/SLUrater/edit/master/routes/dining.js"
+                   href="/KirbyKaylor/SLUrater/edit/master/models/comments.js"
                    data-method="post" rel="nofollow" data-hotkey="e">Edit</a>
-          <a href="/KirbyKaylor/SLUrater/raw/master/routes/dining.js" class="button minibutton " id="raw-url">Raw</a>
-            <a href="/KirbyKaylor/SLUrater/blame/master/routes/dining.js" class="button minibutton js-update-url-with-hash">Blame</a>
-          <a href="/KirbyKaylor/SLUrater/commits/master/routes/dining.js" class="button minibutton " rel="nofollow">History</a>
+          <a href="/KirbyKaylor/SLUrater/raw/master/models/comments.js" class="button minibutton " id="raw-url">Raw</a>
+            <a href="/KirbyKaylor/SLUrater/blame/master/models/comments.js" class="button minibutton js-update-url-with-hash">Blame</a>
+          <a href="/KirbyKaylor/SLUrater/commits/master/models/comments.js" class="button minibutton " rel="nofollow">History</a>
         </div><!-- /.button-group -->
 
             <a class="minibutton danger empty-icon"
-               href="/KirbyKaylor/SLUrater/delete/master/routes/dining.js"
+               href="/KirbyKaylor/SLUrater/delete/master/models/comments.js"
                data-method="post" data-test-id="delete-blob-file" rel="nofollow">
 
           Delete
@@ -666,9 +652,11 @@
 <span id="L6" rel="#L6">6</span>
 <span id="L7" rel="#L7">7</span>
 <span id="L8" rel="#L8">8</span>
+<span id="L9" rel="#L9">9</span>
+<span id="L10" rel="#L10">10</span>
 
             </td>
-            <td class="blob-line-code"><div class="code-body highlight"><pre><div class='line' id='LC1'><span class="c1">// Dining services route</span></div><div class='line' id='LC2'><br/></div><div class='line' id='LC3'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span></div><div class='line' id='LC4'><br/></div><div class='line' id='LC5'><span class="c1">// need to get the item id number</span></div><div class='line' id='LC6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">response</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;dining&#39;</span><span class="p">)</span></div><div class='line' id='LC7'><br/></div><div class='line' id='LC8'><span class="p">};</span></div></pre></div></td>
+            <td class="blob-line-code"><div class="code-body highlight"><pre><div class='line' id='LC1'><span class="c1">// A model for a visitor collection</span></div><div class='line' id='LC2'><span class="kd">var</span> <span class="nx">mongojs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongojs&#39;</span><span class="p">);</span></div><div class='line' id='LC3'><br/></div><div class='line' id='LC4'><span class="c1">// Access the database</span></div><div class='line' id='LC5'><span class="kd">var</span> <span class="nx">db</span> <span class="o">=</span> <span class="nx">mongojs</span><span class="p">(</span><span class="s1">&#39;SLUrater&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;comments&#39;</span><span class="p">]);</span></div><div class='line' id='LC6'><br/></div><div class='line' id='LC7'><span class="c1">// Adding a comment</span></div><div class='line' id='LC8'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">category</span><span class="p">,</span> <span class="nx">content</span><span class="p">,</span> <span class="nx">date</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span></div><div class='line' id='LC9'>&nbsp;&nbsp;&nbsp;&nbsp;</div><div class='line' id='LC10'><span class="p">};</span></div></pre></div></td>
           </tr>
         </table>
   </div>
@@ -711,7 +699,7 @@
     </a>
 
     <ul class="site-footer-links">
-      <li>&copy; 2014 <span title="0.05354s from github-fe129-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+      <li>&copy; 2014 <span title="0.06068s from github-fe129-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
         <li><a href="/site/terms">Terms</a></li>
         <li><a href="/site/privacy">Privacy</a></li>
         <li><a href="/security">Security</a></li>
