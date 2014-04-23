@@ -1,8 +1,7 @@
-// Dining services route
+var pages = require('../models/pages');
 
 module.exports = function(request,response) {
-
-// need to get the item id number
-        response.render('dining')
-
+    pages.retrievePages("dining", function(page) {
+        response.render('dining',{diningPage:page});
+    });
 };

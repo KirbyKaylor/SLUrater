@@ -27,6 +27,7 @@ app.get('/events', require('./routes/events'));
 app.get('/logout', require('./routes/logout'));
 app.post('submitcomment', require('./routes/submitcomment'));
 app.get('/create_form', require('./routes/create_form'));
+app.post('/createpage', require('./routes/createpage'));
 
 
 

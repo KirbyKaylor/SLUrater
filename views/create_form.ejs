@@ -3,12 +3,12 @@
 <p>Welcome to Create Your Own Post</p>
 <p>Fill out the form below.</p>
 
-<form id="create" method="post" action="/pages">
+<form id="create" method="post" action="/createpage">
     <fieldset>
     <legend>Enter post name.</legend>
     <input id="postName" type="text" name="title" placeholder="Post title here">
     <legend>Choose post's category.</legend>
-    <select name="categories">
+    <select name="category">
         <option value="dining">Dining Services</option>
         <option value="housing">Housing</option>
         <option value="buildings">Academic Buildings</option>
@@ -16,7 +16,8 @@
         <option value="events">Campus Events</option>
     </select>
     <legend>Enter post content.</legend>
-    <input id="postInfo" type="text" name="info" placeholder="Post content here">
+    <input id="postInfo" type="text" name="description" placeholder="Post content here">
+    <input id="postName" type="text" name="id" placeholder="Post page id here">
     <input id="createPage" type="submit">
     </fieldset>
 </form>

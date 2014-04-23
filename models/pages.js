@@ -1,41 +1,30 @@
 // A model for a visitor collection
 var mongojs = require('mongojs');
-var bcrypt = require('bcrypt');
 
 // Access the database
 var db = mongojs('SLUrater', ['pages']);
 
 // Register a new user
-module.exports.createpage = function(name, description, id, category, callback) {
-    db.pages.insert({
-                name: name,
-                description: description,
-                category: category,
-                _id: id
-    });
+module.exports.createpage = function(title, description, id, category, callback) {
+    
+
+                
+     db.pages.insert({
+        title: title,
+        description: description,
+        category: category,
+        _id: id}
+                );
     
     callback(true);
 };
 
-// Function to get a list of visitors
-module.exports.retrieve = function(callback) {
+// Function to return pages based on category
+module.exports.retrievePages = function(category, callback) {
     
-    db.pages.find({}, function(error,names) {
+    db.pages.find({category: category}, function(error,names) {
         if (error) throw error;
         
         callback(names);
     });
 };
-
-
-
-
-
-
-
-
-
-
-
-
-

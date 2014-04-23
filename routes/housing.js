@@ -1,7 +1,7 @@
-// Housing route
+var pages = require('../models/pages');
 
 module.exports = function(request,response) {
-
-        response.render('housing')
-
+    pages.retrievePages("housing", function(page) {
+        response.render('housing',{house:page});
+    });
 };
