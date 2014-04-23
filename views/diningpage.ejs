@@ -1,0 +1,22 @@
+<% include chunks/head %>
+
+<p>Dining Page which will have comments and ratings from users.</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Page ID</th>
+    </tr>
+
+        <tr>
+            <td><%= diningPage.title %></td>.
+            <td><%= diningPage.description %></td>
+            <td><%= diningPage._id %></td>
+        </tr>
+
+</table>
+
+
+<% include chunks/nav %>
+<% include chunks/foot %>
