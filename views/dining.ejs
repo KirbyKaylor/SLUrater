@@ -8,11 +8,10 @@
         <th>Description</th>
         <th>Page ID</th>
     </tr>
-    <% diningPage.forEach(function(page) { %>
+    <% diningPage.forEach(function(diningPage) { %>
         <tr>
-            <td><a href="/diningpage" </a><%= page.title %></td>.
-            <td><%= page.description %></td>
-            <td name = "id" </a> <%= page._id %></td>>
+            <td><a href=“/diningpage/<%= diningPage._id %>”><%= diningPage.title %></a></td>
+            <td><%= diningPage.description %></td>
         </tr>
     <% }); %>
 </table>

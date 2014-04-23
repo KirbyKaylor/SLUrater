@@ -30,11 +30,13 @@ module.exports.retrievePages = function(category, callback) {
 };
 
 // Function to return a page based on the page id
-module.exports.retrievePage = function(id, callback) {
+// changed to match from email
+module.exports.retrievePage = function(pageid, callback) {
     
-    db.pages.find({_id: '1'}, function(error,page) {
+    db.pages.findOne({_id:pageid}, function(error,page) {
         if (error) throw error;
         
         callback(page);
     });
 };
+

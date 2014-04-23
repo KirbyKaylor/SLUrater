@@ -5,9 +5,12 @@ var pages = require('../models/pages');
 
 module.exports = function(request,response) {
     
-    var id = request.body.id;
+    var url = request.url;
+    var index = url.lastIndexOf("/");
+    var pageid = url.substring(index+1);
     
-    pages.retrievePage(id, function(page) {
+    pages.retrievePage(pageid, function(page) {
         response.render('diningpage',{diningPage:page});
     });
 };
+

@@ -28,7 +28,7 @@ app.get('/logout', require('./routes/logout'));
 app.post('submitcomment', require('./routes/submitcomment'));
 app.get('/create_form', require('./routes/create_form'));
 app.post('/createpage', require('./routes/createpage'));
-app.get('/diningpage', require('./routes/diningpage'));
+app.get('/diningpage/:id', require('./routes/diningpage'));
 
 
 
