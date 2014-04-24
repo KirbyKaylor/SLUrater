@@ -29,7 +29,7 @@ body {
 
 nav {
     float: left;
-    clear: left;
+    clear:left;
     border: groove;
     border-color: #400000;
     padding: 3px;
@@ -65,6 +65,7 @@ nav {
 
 .category {
     float: right;
+    clear: left;
     border: solid;
     border-color: #400000;
     padding: 15px;
@@ -85,4 +86,17 @@ nav {
     margin:40px;
     margin-bottom: 60px;
     color: #400000;
+}
+
+#createButton {
+    clear: left;
+    float:right;
+    border: solid;
+    border-color: #400000;
+    background-color: #FFFFFF;
+    margin-right:40px;
+    margin-top: 20px;
+    padding: 10px;
+    
+    
 }
