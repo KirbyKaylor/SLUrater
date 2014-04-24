@@ -40,3 +40,19 @@ module.exports.retrievePage = function(pageid, callback) {
     });
 };
 
+// Delete all users
+module.exports.deleteAll = function(callback){
+    db.pages.remove({}, function(error) {
+        if (error) throw error;
+        callback();
+    });
+};
+
+// Close the connection
+module.exports.close = function(callback){
+    db.close(function(error) {
+        if (error) throw error;
+        callback();
+    });
+}
+
