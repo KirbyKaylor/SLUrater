@@ -29,6 +29,7 @@ app.post('submitcomment', require('./routes/submitcomment'));
 app.get('/create_form', require('./routes/create_form'));
 app.post('/createpage', require('./routes/createpage'));
 app.get('/diningpage/:id', require('./routes/diningpage'));
+app.post('/comment', require('./routes/comment'));
 
 
 

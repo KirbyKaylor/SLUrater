@@ -16,6 +16,11 @@
         </tr>
 
 </table>
+<form method="post" action="/comment">
+    <textarea name="comment"></textarea>
+    <input type="hidden" name="pageid" value="<%= diningPage._id %>">
+    <input type="submit">
+</form>
 
 
 <% include chunks/nav %>
