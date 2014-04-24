@@ -1,3 +1,88 @@
 a {
-    color: red;
+    color: #400000;
+}
+body {
+    background-image: url(http://students.stlawu.edu/thelmo/wp-content/uploads/2011/03/Logo-Shield-Color.png);
+    background-size: 100%;
+}
+
+#header {
+    text-align: center;
+    font-size: 60px;
+    border: solid;
+    border-color: #FFFFFF;
+    padding-bottom: 10px;
+    background-color: #FFFFFF;
+    color: #400000;
+}
+
+#log_reg {
+    float:right;
+    border: groove;
+    border-color: #400000;
+    padding: 3px;
+    color: #400000;
+    background-color: #FFFFFF;
+    font-size: 20px;
+    margin: 40px;
+}
+
+nav {
+    float: left;
+    clear: left;
+    border: groove;
+    border-color: #400000;
+    padding: 3px;
+    background-color: #FFFFFF;
+    margin:40px;
+    font-size: 24px;
+}
+
+#createpage {
+    float: right;
+    border: solid;
+    border-color: #400000;
+    padding: 15px;
+    background-color: #FFFFFF;
+    font-size: 20px;
+    margin:40px;
+    margin-bottom: 60px;
+    color: #400000;
+}
+
+#mission {
+    clear: left;
+    border: solid;
+    border-color: #400000;
+    color: #ff3c3c;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #FFFFFF;
+    font-size: 20px;
+    text-align: center;
+    margin: 40px;
+}
+
+.category {
+    float: right;
+    border: solid;
+    border-color: #400000;
+    padding: 15px;
+    background-color: #FFFFFF;
+    font-size: 20px;
+    margin:40px;
+    margin-bottom: 60px;
+    color: #400000;
+}
+
+.page {
+    float: right;
+    border: solid;
+    border-color: #400000;
+    padding: 15px;
+    background-color: #FFFFFF;
+    font-size: 20px;
+    margin:40px;
+    margin-bottom: 60px;
+    color: #400000;
 }

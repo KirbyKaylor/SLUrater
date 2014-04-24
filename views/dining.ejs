@@ -1,20 +1,21 @@
 <% include chunks/head %>
-
-<p>Dining Services page.</p>
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Page ID</th>
-    </tr>
-    <% diningPage.forEach(function(diningPage) { %>
+<div class="category">
+    <h1>Dining Services</h1>
+    
+    <table>
         <tr>
-            <td><a href="/diningpage/<%= diningPage._id %>"><%= diningPage.title %></a></td>
-            <td><%= diningPage.description %></td>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Page ID</th>
         </tr>
-    <% }); %>
-</table>
+        <% diningPage.forEach(function(diningPage) { %>
+            <tr>
+                <td><a href="/diningpage/<%= diningPage._id %>"><%= diningPage.title %></a></td>
+                <td><%= diningPage.description %></td>
+            </tr>
+        <% }); %>
+    </table>
+</div>
 
 <% include chunks/create_page %>
 <% include chunks/nav %>

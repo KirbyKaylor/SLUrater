@@ -1,26 +1,27 @@
 <% include chunks/head %>
-
-<p>Dining Page which will have comments and ratings from users.</p>
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Page ID</th>
-    </tr>
-
+<div class="page">
+    <p>Dining Page which will have comments and ratings from users.</p>
+    
+    <table>
         <tr>
-            <td><%= diningPage.title %></td>
-            <td><%= diningPage.description %></td>
-            <td><%= diningPage._id %></td>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Page ID</th>
         </tr>
-
-</table>
-<form method="post" action="/comment">
-    <textarea name="comment"></textarea>
-    <input type="hidden" name="pageid" value="<%= diningPage._id %>">
-    <input type="submit">
-</form>
+    
+            <tr>
+                <td><%= diningPage.title %></td>
+                <td><%= diningPage.description %></td>
+                <td><%= diningPage._id %></td>
+            </tr>
+    
+    </table>
+    <form method="post" action="/comment">
+        <textarea name="comment"></textarea>
+        <input type="hidden" name="pageid" value="<%= diningPage._id %>">
+        <input type="submit">
+    </form>
+</div>
 
 
 <% include chunks/nav %>
