@@ -33,7 +33,7 @@ module.exports.retrievePages = function(category, callback) {
 // changed to match from email
 module.exports.retrievePage = function(pageid, callback) {
     
-    db.pages.findOne({_id:pageid}, function(error,page) {
+    db.pages.findOne({_id:mongojs.ObjectId(pageid)}, function(error,page) {
         if (error) throw error;
         
         callback(page);
