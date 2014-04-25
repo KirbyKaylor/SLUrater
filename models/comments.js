@@ -13,4 +13,13 @@ module.exports.create = function(comment, pageid, callback) {
 };
 
 
+module.exports.retrieveComments = function(pageid, callback) {
+    
+    db.comments.find({postid:mongojs.ObjectId(pageid)}, function(error,comments) {
+        if (error) throw error;
+        
+        callback(comments);
+    });
+};
+
 // still need to be able to view the lot of them

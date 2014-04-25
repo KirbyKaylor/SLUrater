@@ -2,6 +2,22 @@
 <div class="page">
     <p>Dining Page which will have comments and ratings from users.</p>
     
+    
+    <table>
+        <tr>
+            <th>Comment</th>
+        </tr>
+        <% comments.forEach(function(comment) { %>
+        <tr>
+            <td><%= comment.text %></td>
+        </tr>
+        <tr>
+            <td>-------------------</td>
+        </tr>
+        <% }); %>
+        
+    </table.
+    
     <table>
         <tr>
             <th>Name</th>
