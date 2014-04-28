@@ -7,13 +7,12 @@ var db = mongojs('SLUrater', ['users']);
 
 // Register a new user
 module.exports.create = function(name, password, callback) {
-    
     bcrypt.hash(password, 10, function(error,hash) {
         if (error) throw error;
         
         db.users.findAndModify({
             query: {name:name},
-            update: {$setOnInsert:{password:hash}},
+            update: {$setOnInsert:{password:hash, ban:true, admin:false}},
             new: true,
             upsert: true
             
@@ -61,6 +60,13 @@ module.exports.close = function(callback){
     });
 };
 
-
+// Retrieve all the usernames
+module.exports.retrieveUsers  = function (callback) {
+    db.users.find({}, function(error, usernames) {
+        if (error) throw error;
+        
+        callback(usernames);
+    });
+}
 
 

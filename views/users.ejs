@@ -1,0 +1,38 @@
+<% include chunks/head %>
+<div class="category">
+    <h1>Users</h1>
+    
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Ban Status</th>
+            <th>Admin Status</th>
+        </tr>
+        <% users.forEach(function(user) { %>
+            <tr>
+                <% var ban;
+                   var admin;
+                if (!user.ban) {
+                    ban = "add ban" 
+                }
+                if (user.ban) {
+                    ban = "lift ban"
+                }
+                if (!user.admin) {
+                    admin = "add as admin" 
+                }
+                if (user.admin) {
+                    admin = "delete as admin"
+                }
+                %>
+                <td><%=user.name%></td>
+                <td><%=ban%></td>
+                <td><%=admin%></td>
+            </tr>
+        <% }); %>
+    </table>
+</div>
+
+<% include chunks/create_page %>
+<% include chunks/nav %>
+<% include chunks/foot %>

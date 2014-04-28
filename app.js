@@ -31,6 +31,7 @@ app.post('/createpage', require('./routes/createpage'));
 app.get('/diningpage/:id', require('./routes/diningpage'));
 app.get('/rate/:b', require('./routes/rate'));
 app.post('/comment', require('./routes/comment'));
+app.get('/users', require('./routes/users'));
 
 
 
