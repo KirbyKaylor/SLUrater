@@ -1,5 +1,6 @@
 var pages = require('../models/pages');
 var comments = require('../models/comments');
+var ratings = require('../models/ratings');
 
 
 
@@ -11,7 +12,9 @@ module.exports = function(request,response) {
     
     pages.retrievePage(pageid, function(page) {
         comments.retrieveComments(pageid, function(comments) {
-        response.render('diningpage',{diningPage:page, comments:comments});
+            ratings.retrieveRatings(pageid, function(ratings) {
+                response.render('diningpage',{diningPage:page, comments:comments, ratings:ratings});
+                });
         });
     });
     

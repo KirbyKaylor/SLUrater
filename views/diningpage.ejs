@@ -2,6 +2,11 @@
 <div class="page">
     <p>Dining Page which will have comments and ratings from users.</p>
     
+    <li><a id="dining" href="/rate/1<%=diningPage._id%>">Like</a></li>
+    <li><a id="dining" href="/rate/2<%=diningPage._id%>">Dislike</a></li>
+    
+    Like Ratings: <%=ratings.like%>
+    Dislike Ratings: <%=ratings.dislike%>
     
     <table>
         <tr>
@@ -16,7 +21,7 @@
         </tr>
         <% }); %>
         
-    </table.
+    </table
     
     <table>
         <tr>
