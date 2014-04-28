@@ -12,7 +12,7 @@ module.exports.create = function(name, password, callback) {
         
         db.users.findAndModify({
             query: {name:name},
-            update: {$setOnInsert:{password:hash, ban:true, admin:false}},
+            update: {$setOnInsert:{password:hash, ban:false, admin:false}},
             new: true,
             upsert: true
             
@@ -69,4 +69,34 @@ module.exports.retrieveUsers  = function (callback) {
     });
 }
 
+// Ban a user
+module.exports.ban = function(userid, callback) {
+    db.users.update(
+            {_id:mongojs.ObjectId(userid)},
+            {$set: {ban:true}});
+    callback(true);
+}
 
+// Remove a band on a user
+module.exports.liftban = function(userid, callback) {
+    db.users.update(
+            {_id:mongojs.ObjectId(userid)},
+            {$set: {ban:false}});
+    callback(true);
+}
+
+// Make a user an admin
+module.exports.addAdmin = function(userid, callback) {
+    db.users.update(
+            {_id:mongojs.ObjectId(userid)},
+            {$set: {admin:true}});
+    callback(true);
+}
+
+// delete a user as an admin
+module.exports.removeAdmin = function(userid, callback) {
+    db.users.update(
+            {_id:mongojs.ObjectId(userid)},
+            {$set: {admin:false}});
+    callback(true);
+}

@@ -29,11 +29,13 @@ app.post('submitcomment', require('./routes/submitcomment'));
 app.get('/create_form', require('./routes/create_form'));
 app.post('/createpage', require('./routes/createpage'));
 app.get('/diningpage/:id', require('./routes/diningpage'));
-app.get('/rate/:b', require('./routes/rate'));
+app.get('/rate/:id', require('./routes/rate'));
 app.post('/comment', require('./routes/comment'));
 app.get('/users', require('./routes/users'));
-
-
+app.get('/ban/:id', require('./routes/ban'));
+app.get('/liftban/:id', require('./routes/liftban'));
+app.get('/addadmin/:id', require('./routes/addadmin'));
+app.get('/removeadmin/:id', require('./routes/removeadmin'));
 
 
 // Default route
