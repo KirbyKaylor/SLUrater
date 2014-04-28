@@ -5,9 +5,15 @@
     <table>
         <tr>
             <th>Name</th>
-            <th>Ban Status</th>
-            <th>Admin Status</th>
+            <% if (session != null) { 
+                if (session.admin) { %>
+                <th>Ban Status</th>
+                <th>Admin Status</th>
+            <% }} %>
         </tr>
+    
+
+
         <% users.forEach(function(user) { %>
             <tr>
                 <% var ban;
@@ -32,8 +38,12 @@
                 }
                 %>
                 <td><%=user.name%></td>
-                <td><a id=ban" href="/<%=bpage%>/<%=user._id%>"><%=ban%></a></td>
-                <td><a id=admin" href="/<%=apage%>/<%=user._id%>"><%=admin%></a></td>
+
+                    <% if (session != null) {
+                        if (session.admin) { %>
+                    <td><a id=ban" href="/<%=bpage%>/<%=user._id%>"><%=ban%></a></td>
+                    <td><a id=admin" href="/<%=apage%>/<%=user._id%>"><%=admin%></a></td>
+                    <% }} %>
             </tr>
         <% }); %>
     </table>

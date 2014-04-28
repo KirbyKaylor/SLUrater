@@ -5,8 +5,8 @@ var mongojs = require('mongojs');
 var db = mongojs('SLUrater', ['comments']);
 
 // create a new comment
-module.exports.create = function(comment, pageid, callback) {
-    db.comments.insert({text:comment, postid:mongojs.ObjectId(pageid)}, function(error) {
+module.exports.create = function(comment, pageid, username, callback) {
+    db.comments.insert({text:comment, postid:mongojs.ObjectId(pageid), username:username}, function(error) {
         if (error) throw error
         callback();
     });

@@ -34,6 +34,10 @@ module.exports.retrieve = function(name, password, callback) {
             callback(false);
         }
         
+        if (user.ban) {
+            callback(false);
+        }
+        
         else {
             bcrypt.compare(password, user.password, function(error, success) {
                 if (error) throw error;
@@ -99,4 +103,14 @@ module.exports.removeAdmin = function(userid, callback) {
             {_id:mongojs.ObjectId(userid)},
             {$set: {admin:false}});
     callback(true);
+}
+
+// find user based on name
+
+module.exports.findUser = function (name, callback) {
+    db.users.findOne({name: name}, function(error, user) {
+        if (error) throw error;
+        
+        callback(user);
+    });
 }

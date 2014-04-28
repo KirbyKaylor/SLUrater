@@ -14,7 +14,7 @@ module.exports = function(request,response) {
         }
         
         else {
-            request.session.error = "Wrong username or password.";
+            request.session.error = "Wrong username or password.  Or you could be banned.";
         }
         
         response.redirect('/');
