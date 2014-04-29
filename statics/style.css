@@ -29,17 +29,19 @@ body {
 
 nav {
     float: left;
-    clear:left;
     border: groove;
     border-color: #400000;
     padding: 3px;
     background-color: #FFFFFF;
-    margin:40px;
     font-size: 24px;
+    margin-left: 40px;
+    width: 300px;
+    display: inline-block;
 }
 
 #createpage {
     float: right;
+    clear: both;
     border: solid;
     border-color: #400000;
     padding: 15px;
@@ -51,7 +53,6 @@ nav {
 }
 
 #mission {
-    clear: left;
     border: solid;
     border-color: #400000;
     color: #ff3c3c;
@@ -61,40 +62,51 @@ nav {
     font-size: 20px;
     text-align: center;
     margin: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 80%;
 }
 
 .category {
-    float: right;
-    clear: left;
+    float: left;
     border: solid;
     border-color: #400000;
     padding: 15px;
     background-color: #FFFFFF;
     font-size: 20px;
-    margin:40px;
-    margin-bottom: 60px;
+    margin-left:40px;
     color: #400000;
+    display: inline-block;
 }
 
 .page {
-    float: right;
+    float: left;
     border: solid;
     border-color: #400000;
     padding: 15px;
     background-color: #FFFFFF;
     font-size: 20px;
-    margin:40px;
-    margin-bottom: 60px;
+    margin-left: 40px;
     color: #400000;
+    display: inline-block;
 }
 
 #createButton {
-    clear: left;
-    float:right;
+    float: right;
     border: solid;
     border-color: #400000;
     background-color: #FFFFFF;
     margin-right:40px;
     margin-top: 20px;
     padding: 10px;
+}
+
+#profile {
+    float: left;
+    border: solid;
+    border-color: #400000;
+    background-color: #FFFFFF;
+    color: #400000;
+    margin-left:100px;
+    padding: 15px;
 }
