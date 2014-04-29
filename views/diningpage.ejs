@@ -1,6 +1,7 @@
 <% include chunks/head %>
 <div class="page">
-    <p>Dining Page which will have comments and ratings from users.</p>
+    <h1><%= diningPage.title %></h1>
+    <p><%= diningPage.description %></p>
     
     <% if (username) { %>
     <li><a id="dining" href="/rate/01<%=diningPage._id%>">Like</a></li>
@@ -24,20 +25,8 @@
         </tr>
         <% }); %>
         
-    </table
-    
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-        </tr>
-    
-            <tr>
-                <td><%= diningPage.title %></td>
-                <td><%= diningPage.description %></td>
-            </tr>
-    
     </table>
+    
     <% if (username) { %>
     
         <form method="post" action="/comment">
