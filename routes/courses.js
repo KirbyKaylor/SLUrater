@@ -1,7 +1,8 @@
 // Courses route
+var pages = require('../models/pages');
 
 module.exports = function(request,response) {
-
-        response.render('courses')
-
+    pages.retrievePages("courses", function(page) {
+        response.render('courses',{course:page});
+    });
 };

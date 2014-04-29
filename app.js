@@ -31,6 +31,7 @@ app.post('/createpage', require('./routes/createpage'));
 app.get('/diningpage/:id', require('./routes/diningpage'));
 app.get('/housingpage/:id', require('./routes/housingpage'));
 app.get('/buildingspage/:id', require('./routes/buildingspage'));
+app.get('/coursespage/:id', require('./routes/coursespage'));
 app.get('/rate/:id', require('./routes/rate'));
 app.post('/comment', require('./routes/comment'));
 app.get('/users', require('./routes/users'));
