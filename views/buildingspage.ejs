@@ -1,18 +1,8 @@
 <% include chunks/head %>
 <div class="page">
-    <p>Academic Buildings Page which will have comments and ratings from users.</p>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-        </tr>
-    
-        <tr>
-            <td><%= buildingspage.title %></td>
-            <td><%= buildingspage.description %></td>
-        </tr>
-    
-    </table>
+    <h1><%= buildingspage.title %></h1>
+    <p><%= buildingspage.description %></p>
+
     <% if (username) { %>
     <li><a id="buildings" href="/rate/1<%=buildingspage._id%>">Like</a></li>
     <li><a id="buildings" href="/rate/2<%=buildingspage._id%>">Dislike</a></li>
