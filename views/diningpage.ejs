@@ -1,13 +1,11 @@
 <% include chunks/head %>
 <div class="page">
-    <h1><%= diningPage.title %></h1>
-    <p><%= diningPage.description %></p>
+    <p>Dining Page which will have comments and ratings from users.</p>
     
     <% if (username) { %>
-    <li><a id="dining" href="/rate/1<%=diningPage._id%>">Like</a></li>
-    <li><a id="dining" href="/rate/2<%=diningPage._id%>">Dislike</a></li>
+    <li><a id="dining" href="/rate/01<%=diningPage._id%>">Like</a></li>
+    <li><a id="dining" href="/rate/02<%=diningPage._id%>">Dislike</a></li>
     <% }; %>
-
     
     Like Ratings: <%=ratings.like%>
     Dislike Ratings: <%=ratings.dislike%>
@@ -28,7 +26,18 @@
         
     </table
     
-
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    
+            <tr>
+                <td><%= diningPage.title %></td>
+                <td><%= diningPage.description %></td>
+            </tr>
+    
+    </table>
     <% if (username) { %>
     
         <form method="post" action="/comment">
