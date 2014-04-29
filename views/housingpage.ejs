@@ -1,0 +1,55 @@
+<% include chunks/head %>
+<div class="page">
+    <p>Housing Page which will have comments and ratings from users.</p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    
+        <tr>
+            <td><%= housingpage.title %></td>
+            <td><%= housingpage.description %></td>
+        </tr>
+    
+    </table>
+    <% if (username) { %>
+    <li><a id="housing" href="/rate/1<%=housingpage._id%>">Like</a></li>
+    <li><a id="housing" href="/rate/2<%=housingpage._id%>">Dislike</a></li>
+    <% }; %>
+    
+    Like Ratings: <%=ratings.like%>
+    Dislike Ratings: <%=ratings.dislike%>
+    
+    
+    <table>
+        <tr>
+            <th>Comment</th>
+        </tr>
+        <% comments.forEach(function(comment) { %>
+        <tr>
+            <td><%=comment.username%> commented, "<%= comment.text %>"</td>
+        </tr>
+        <tr>
+            <td>-------------------</td>
+        </tr>
+        <% }); %>
+        
+    </table
+    
+
+    <% if (username) { %>
+    
+        <form method="post" action="/comment">
+            <textarea name="comment"></textarea>
+            <input type="hidden" name="pageid" value="<%= housingpage._id %>">
+            <input type="hidden" name="username" value="<%= username %>">
+            <input type="submit">
+        </form>
+    <% }; %>
+</div>
+
+
+<% include chunks/nav %>
+<% include chunks/foot %>
+
