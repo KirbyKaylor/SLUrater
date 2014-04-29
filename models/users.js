@@ -48,22 +48,6 @@ module.exports.retrieve = function(name, password, callback) {
     });
 };
 
-// Delete all users
-module.exports.deleteAll = function(callback){
-    db.users.remove({}, function(error) {
-        if (error) throw error;
-        callback();
-    });
-};
-
-// Close the connection
-module.exports.close = function(callback){
-    db.close(function(error) {
-        if (error) throw error;
-        callback();
-    });
-};
-
 // Retrieve all the usernames
 module.exports.retrieveUsers  = function (callback) {
     db.users.find({}, function(error, usernames) {
@@ -114,3 +98,19 @@ module.exports.findUser = function (name, callback) {
         callback(user);
     });
 }
+
+// Delete all users
+module.exports.deleteAll = function(callback){
+    db.users.remove({}, function(error) {
+        if (error) throw error;
+        callback();
+    });
+};
+
+// Close the connection
+module.exports.close = function(callback){
+    db.close(function(error) {
+        if (error) throw error;
+        callback();
+    });
+};
