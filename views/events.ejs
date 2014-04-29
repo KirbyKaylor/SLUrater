@@ -1,6 +1,18 @@
 <% include chunks/head %>
 <div class="category">
     <h1>Campus Events</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+        <% event.forEach(function(page) { %>
+            <tr>
+                <td><a href="/eventspage/<%= page._id %>"><%= page.title %></td>
+                <td><%= page.description %></td>
+            </tr>
+        <% }); %>
+    </table>
 </div>
 <% include chunks/create_page %>
 <% include chunks/nav %>
