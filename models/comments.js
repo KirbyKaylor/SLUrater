@@ -23,3 +23,21 @@ module.exports.retrieveComments = function(pageid, callback) {
 };
 
 // still need to be able to view the lot of them
+
+
+
+// Delete all ratings
+module.exports.deleteAll = function(callback){
+    db.comments.remove({}, function(error) {
+        if (error) throw error;
+        callback();
+    });
+};
+
+// Close the connection
+module.exports.close = function(callback){
+    db.close(function(error) {
+        if (error) throw error;
+        callback();
+    });
+};
