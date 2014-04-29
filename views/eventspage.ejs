@@ -5,8 +5,8 @@
     <p><%= eventspage.description %></p>
 
     <% if (username) { %>
-    <li><a id="events" href="/rate/1<%=eventspage._id%>">Like</a></li>
-    <li><a id="events" href="/rate/2<%=eventspage._id%>">Dislike</a></li>
+    <li><a id="events" href="/rate/41<%=eventspage._id%>">Like</a></li>
+    <li><a id="events" href="/rate/42<%=eventspage._id%>">Dislike</a></li>
     <% }; %>
     
     Like Ratings: <%=ratings.like%>
@@ -26,7 +26,7 @@
         </tr>
         <% }); %>
         
-    </table
+    </table>
     
 
     <% if (username) { %>
@@ -35,6 +35,7 @@
             <textarea name="comment"></textarea>
             <input type="hidden" name="pageid" value="<%= eventspage._id %>">
             <input type="hidden" name="username" value="<%= username %>">
+            <input type="hidden" name="category" value="<%= 4 %>">
             <input type="submit">
         </form>
     <% }; %>
