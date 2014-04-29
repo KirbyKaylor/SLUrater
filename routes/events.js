@@ -1,7 +1,8 @@
 // Campus events route
+var pages = require('../models/pages');
 
 module.exports = function(request,response) {
-
-        response.render('events')
-
+    pages.retrievePages("events", function(page) {
+        response.render('events',{event:page});
+    });
 };

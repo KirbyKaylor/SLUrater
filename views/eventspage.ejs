@@ -1,0 +1,55 @@
+<% include chunks/head %>
+<div class="page">
+    <p>Campus Events Page which will have comments and ratings from users.</p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    
+        <tr>
+            <td><%= eventspage.title %></td>
+            <td><%= eventspage.description %></td>
+        </tr>
+    
+    </table>
+    <% if (username) { %>
+    <li><a id="events" href="/rate/1<%=eventspage._id%>">Like</a></li>
+    <li><a id="events" href="/rate/2<%=eventspage._id%>">Dislike</a></li>
+    <% }; %>
+    
+    Like Ratings: <%=ratings.like%>
+    Dislike Ratings: <%=ratings.dislike%>
+    
+    
+    <table>
+        <tr>
+            <th>Comment</th>
+        </tr>
+        <% comments.forEach(function(comment) { %>
+        <tr>
+            <td><%=comment.username%> commented, "<%= comment.text %>"</td>
+        </tr>
+        <tr>
+            <td>-------------------</td>
+        </tr>
+        <% }); %>
+        
+    </table
+    
+
+    <% if (username) { %>
+    
+        <form method="post" action="/comment">
+            <textarea name="comment"></textarea>
+            <input type="hidden" name="pageid" value="<%= eventspage._id %>">
+            <input type="hidden" name="username" value="<%= username %>">
+            <input type="submit">
+        </form>
+    <% }; %>
+</div>
+
+
+<% include chunks/nav %>
+<% include chunks/foot %>
+
