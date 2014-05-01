@@ -33,18 +33,33 @@ module.exports.retrieve = function(name, password, callback) {
         if (!user) {
             callback(false);
         }
-        
-        if (user.ban) {
-            callback(false);
-        }
-        
         else {
+            if (user.ban) {
+                callback(false);
+            }
+            else {
             bcrypt.compare(password, user.password, function(error, success) {
                 if (error) throw error;
                 
                 callback(success);
-            })
+            })};
         }
+    });
+};
+
+// Delete all users
+module.exports.deleteAll = function(callback){
+    db.users.remove({}, function(error) {
+        if (error) throw error;
+        callback();
+    });
+};
+
+// Close the connection
+module.exports.close = function(callback){
+    db.close(function(error) {
+        if (error) throw error;
+        callback();
     });
 };
 
@@ -98,19 +113,3 @@ module.exports.findUser = function (name, callback) {
         callback(user);
     });
 }
-
-// Delete all users
-module.exports.deleteAll = function(callback){
-    db.users.remove({}, function(error) {
-        if (error) throw error;
-        callback();
-    });
-};
-
-// Close the connection
-module.exports.close = function(callback){
-    db.close(function(error) {
-        if (error) throw error;
-        callback();
-    });
-};
