@@ -31,7 +31,8 @@ html {
     color: #400000;
     background-color: #FFFFFF;
     font-size: 20px;
-    margin: 40px;
+    margin-left: 40px;
+    margin-bottom: 40px;
 }
 
 nav {
@@ -92,6 +93,16 @@ textarea {
     height: 150px;
 }
 
+#error {
+    float: right;
+    border: solid;
+    border-color: #400000;
+    background-color: #FFFFFF;
+    color: #FF0000;
+    margin-left: 40px;
+    text-align: center;
+    padding: 10px;
+}
 
 #createButton {
     float: left;
