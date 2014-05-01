@@ -40,7 +40,7 @@ app.get('/ban/:id', require('./routes/ban'));
 app.get('/liftban/:id', require('./routes/liftban'));
 app.get('/addadmin/:id', require('./routes/addadmin'));
 app.get('/removeadmin/:id', require('./routes/removeadmin'));
-app.get('/flag/:id', require('./routes/flag'));
+//app.get('/flag/:id', require('./routes/flag'));
 app.get('/deactivate/:id', require('./routes/deactivate'));
 
 
