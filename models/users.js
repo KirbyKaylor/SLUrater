@@ -104,6 +104,14 @@ module.exports.removeAdmin = function(userid, callback) {
     callback(true);
 }
 
+// Delete a user based on username from deactivate
+module.exports.deleteUserName = function(username, callback) {
+    db.users.remove({name:username}, function(error) {
+        if (error) throw error;
+        callback();
+    });
+};
+
 // find user based on name
 
 module.exports.findUser = function (name, callback) {
