@@ -112,32 +112,4 @@ module.exports.findUser = function (name, callback) {
         
         callback(user);
     });
-<<<<<<< HEAD
 }
-=======
-}
-
-// Delete a User
-module.exports.deleteUserName = function(username, callback) {
-    db.users.remove({name:username}, function(error) {
-        if (error) throw error;
-        callback();
-    });
-};
-
-// Delete all users
-module.exports.deleteAll = function(callback){
-    db.users.remove({}, function(error) {
-        if (error) throw error;
-        callback();
-    });
-};
-
-// Close the connection
-module.exports.close = function(callback){
-    db.close(function(error) {
-        if (error) throw error;
-        callback();
-    });
-};
->>>>>>> d277ffaeffd5b8f022c35e54a58814f18a8c68bf
