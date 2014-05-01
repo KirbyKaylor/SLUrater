@@ -1,5 +1,6 @@
 <% include chunks/head %>
-<div id="createpage">
+<% include chunks/nav %>
+<div id="createpage" >
     <p>Welcome to Create Your Own Post</p>
     <p>Fill out the form below.</p>
     
@@ -16,12 +17,10 @@
             <option value="events">Campus Events</option>
         </select>
         <legend>Enter post content.</legend>
-        <input id="postInfo" type="text" name="description" placeholder="Post content here">
+        <textarea id="postInfo" type="text" name="description" placeholder="Post content here"></textarea>
         <input id="createPage" type="submit">
         </fieldset>
     </form>
 </div>
 
-
-<% include chunks/nav %>
 <% include chunks/foot %>
