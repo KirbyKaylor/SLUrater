@@ -25,7 +25,7 @@ app.get('/buildings', require('./routes/buildings'));
 app.get('/courses', require('./routes/courses'));
 app.get('/events', require('./routes/events'));
 app.get('/logout', require('./routes/logout'));
-app.post('submitcomment', require('./routes/submitcomment'));
+app.post('/submitcomment', require('./routes/submitcomment'));
 app.get('/create_form', require('./routes/create_form'));
 app.post('/createpage', require('./routes/createpage'));
 app.get('/diningpage/:id', require('./routes/diningpage'));
@@ -40,8 +40,8 @@ app.get('/ban/:id', require('./routes/ban'));
 app.get('/liftban/:id', require('./routes/liftban'));
 app.get('/addadmin/:id', require('./routes/addadmin'));
 app.get('/removeadmin/:id', require('./routes/removeadmin'));
-app.get('/flag/:id', require('./routes/flag'));
-app.get('deactivate/:id', require('./routes/deactivate'));
+//app.get('/flag/:id', require('./routes/flag'));
+app.get('/deactivate/:id', require('./routes/deactivate'));
 
 
 // Default route
