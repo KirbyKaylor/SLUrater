@@ -99,6 +99,14 @@ module.exports.findUser = function (name, callback) {
     });
 }
 
+// Delete a User
+module.exports.deleteUserName = function(username, callback) {
+    db.users.remove({name:username}, function(error) {
+        if (error) throw error;
+        callback();
+    });
+};
+
 // Delete all users
 module.exports.deleteAll = function(callback){
     db.users.remove({}, function(error) {
