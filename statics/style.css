@@ -47,7 +47,7 @@ nav {
     display: inline-block;
 }
 
-.category, .page, #createpage {
+.category, .page, #createpage, #profile {
     float: left;
     border: solid;
     border-color: #400000;
@@ -60,6 +60,11 @@ nav {
     display: inline-block;
     min-width: 280px;
     width: 50%;
+}
+
+#profile {
+    font-size: 40px;
+    text-align: center;
 }
 
 #createpage {
@@ -99,12 +104,12 @@ textarea {
     padding: 10px;
 }
 
-#profile {
+#deactivate {
     float: left;
     border: solid;
     border-color: #400000;
     background-color: #FFFFFF;
-    color: #400000;
-    margin-left:100px;
-    padding: 15px;
+    padding: 10px;
+    margin: 40px;
+    color: #FF0000;
 }
