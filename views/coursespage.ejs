@@ -12,27 +12,11 @@
     Like Ratings: <%=ratings.like%>
     Dislike Ratings: <%=ratings.dislike%>
     
+    <% include chunks/comment %>
     
-    <table>
-        <tr>
-            <th>Comment</th>
-        </tr>
-        <% comments.forEach(function(comment) { %>
-        <tr>
-            <td><%=comment.username%> commented, "<%= comment.text %>"</td>
-        </tr>
-        <tr>
-            <td>-------------------</td>
-        </tr>
-        <% }); %>
-        
-    </table>
-    
-
-    <% if (username) { %>
-    
+    <% if (username) { %>    
         <form method="post" action="/comment">
-            <textarea name="comment"></textarea>
+            <textarea name="comment" placeholder="Comment here..." ></textarea>
             <input type="hidden" name="pageid" value="<%= coursespage._id %>">
             <input type="hidden" name="username" value="<%= username %>">
             <input type="hidden" name="category" value="<%= 3 %>">
@@ -40,8 +24,6 @@
         </form>
     <% }; %>
 </div>
-
-
 
 <% include chunks/foot %>
 

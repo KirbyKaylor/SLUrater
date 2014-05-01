@@ -1,0 +1,17 @@
+    <table>
+        <tr>
+            <th>Comment</th>
+        </tr>
+        <% comments.forEach(function(comment) { %>
+        <tr>
+            <td><%=comment.username%> commented, "<%= comment.text %>"</td>
+        </tr>
+        <tr>
+            <td>-------------------</td>
+        </tr>
+        <% }); %>
+        
+    </table>
+    
+
+    
