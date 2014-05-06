@@ -18,12 +18,12 @@ exports[ 'create a page' ] = function(test){
         test.done();
     });
 };
-
+/*
 // Successful page retrieve
 exports[ 'retrieve a page' ] = function(test){
     test.expect(1);
-    pages.retrievePage('pageid', function(success){
-        test.ok(success);
+    pages.retrievePage('pageid', function(page){
+        test.ok(page);
         test.done();
     });
 };
@@ -36,7 +36,7 @@ exports[ 'retrieve a bad_page' ] = function(test){
         test.done();
     });
 };
-/*
+
 // Successfully retrieve all pages
 exports[ 'retrieve all pages' ] = function(test){
     test.expect(1);

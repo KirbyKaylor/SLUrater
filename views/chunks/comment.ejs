@@ -9,7 +9,7 @@
                 flag = "FLAGGED"
             } %>
             <td><%=comment.username%> commented, "<%= comment.text %>" <%= flag %></td>
-            <li><a id="flag" href="/flag/0<%=comment._id%>">FLAG</a></li>
+            <td><li id="flag"> -- <a href="/flag/0<%=comment._id%>">FLAG</a></li></td>
         </tr>
         <tr>
             <td>-------------------</td>

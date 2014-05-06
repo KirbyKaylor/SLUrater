@@ -124,3 +124,7 @@ textarea {
     margin: 40px;
     color: #FF0000;
 }
+
+#flag {
+    list-style-type: none;
+}

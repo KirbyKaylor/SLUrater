@@ -1,4 +1,4 @@
-// Registration page: try to register
+
 var pages = require('../models/pages');
 var validator = require('validator');
 
