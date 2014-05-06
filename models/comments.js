@@ -46,3 +46,11 @@ module.exports.flag = function(commentid, callback) {
     });
     // callback(db.comments.find({_id:mongojs.ObjectId(commentid)}));
 }
+
+// Close the connection
+module.exports.close = function(callback){
+    db.close(function(error) {
+        if (error) throw error;
+        callback();
+    });
+};
