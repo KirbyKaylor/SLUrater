@@ -1,16 +1,16 @@
 <% include chunks/head %>
 <% include chunks/nav %>
+<% if (session != null && session.admin) { %>
 <div class="category">
     <h1>Users</h1>
     
     <table>
         <tr>
             <th>Name</th>
-            <% if (session != null) { 
-                if (session.admin) { %>
+
                 <th>Ban Status</th>
                 <th>Admin Status</th>
-            <% }} %>
+ 
         </tr>
     
 
@@ -40,11 +40,9 @@
                 %>
                 <td><%=user.name%></td>
 
-                    <% if (session != null) {
-                        if (session.admin) { %>
+ 
                     <td><a id=ban" href="/<%=bpage%>/<%=user._id%>"><%=ban%></a></td>
                     <td><a id=admin" href="/<%=apage%>/<%=user._id%>"><%=admin%></a></td>
-                    <% }} %>
             </tr>
         <% }); %>
     </table>
@@ -68,14 +66,15 @@
                 <% if (comment.flag) { %>
                     <td><%=comment.username%></td>
                     <td><%=comment.text%></td>
-                    <% if (session != null) { 
-                        if (session.admin) { %>
                     <td><li id="delete"> - <a href="/deletecomment/<%=comment._id%>">DELETE</a></li></td>
-                    <% }} %>
                 <% } %>
             </tr>
         <% }); %>
     </table>
 </div>
-
+<% } else { %>
+            <div class="category">
+                <h1>You are not an administrator, you cannot view this page</h1>
+            </div>
+    <% }%>
 <% include chunks/foot %>
