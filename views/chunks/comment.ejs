@@ -3,8 +3,13 @@
             <th>Comment</th>
         </tr>
         <% comments.forEach(function(comment) { %>
+        <% flag = "" %>
         <tr>
-            <td><%=comment.username%> commented, "<%= comment.text %>"</td>
+            <% if (comment.flag) {
+                flag = "FLAGGED"
+            } %>
+            <td><%=comment.username%> commented, "<%= comment.text %>" <%= flag %></td>
+            <li><a id="flag" href="/flag/0<%=comment._id%>">FLAG</a></li>
         </tr>
         <tr>
             <td>-------------------</td>

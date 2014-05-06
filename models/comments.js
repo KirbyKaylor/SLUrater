@@ -6,7 +6,7 @@ var db = mongojs('SLUrater', ['comments']);
 
 // create a new comment
 module.exports.create = function(comment, pageid, username, callback) {
-    db.comments.insert({text:comment, postid:mongojs.ObjectId(pageid), username:username}, function(error) {
+    db.comments.insert({text:comment, postid:mongojs.ObjectId(pageid), username:username, flag: false}, function(error) {
         if (error) throw error
         callback();
     });
@@ -26,7 +26,7 @@ module.exports.retrieveComments = function(pageid, callback) {
 
 
 
-// Delete all ratings
+// Delete all Comments
 module.exports.deleteAll = function(callback){
     db.comments.remove({}, function(error) {
         if (error) throw error;
@@ -34,10 +34,15 @@ module.exports.deleteAll = function(callback){
     });
 };
 
-// Close the connection
-module.exports.close = function(callback){
-    db.close(function(error) {
+// Flag a comment
+module.exports.flag = function(commentid, callback) {
+    db.comments.update(
+            {_id:mongojs.ObjectId(commentid)},
+            {$set: {flag:true}});
+    db.comments.findOne({_id:mongojs.ObjectId(commentid)}, function(error,comment) {
         if (error) throw error;
-        callback();
+        
+        callback(comment)
     });
-};
+    // callback(db.comments.find({_id:mongojs.ObjectId(commentid)}));
+}
