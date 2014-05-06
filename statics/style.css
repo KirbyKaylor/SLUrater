@@ -124,7 +124,7 @@ textarea {
     color: #FF0000;
 }
 
-#flag {
+#flag, #delete {
     list-style-type: none;
 }
 

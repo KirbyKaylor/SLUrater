@@ -4,8 +4,7 @@
 
 
 <div class="category">
-    <h1>Users</h1>
-    <h2>FLAGGED COMMENTS</h2>
+    <h1>Flagged Comments</h1>
     
     <table>
         <tr>
@@ -27,7 +26,7 @@
                     <td><%=comment.username%></td>
                     <td><%=comment.text%></td>
                     <td><%=comment.postid%></td>
-                    <td><li id="delete"> -- <a href="/deletecomment/<%=comment._id%>">DELETE</a></li></td>
+                    <td><li id="delete"> - <a href="/deletecomment/<%=comment._id%>">DELETE</a></li></td>
                 <% } %>
             </tr>
         <% }); %>
