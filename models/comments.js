@@ -12,13 +12,33 @@ module.exports.create = function(comment, pageid, username, callback) {
     });
 };
 
-
+// Retrieve comments based on Pageid
 module.exports.retrieveComments = function(pageid, callback) {
     
     db.comments.find({postid:mongojs.ObjectId(pageid)}, function(error,comments) {
         if (error) throw error;
         
         callback(comments);
+    });
+};
+
+// Retrieve all comments
+module.exports.retrieveAllComments = function(callback) {
+    
+    db.comments.find({}, function(error,comments) {
+        if (error) throw error;
+        
+        callback(comments);
+    });
+};
+
+// Delete a comment on commentID
+module.exports.deleteComment = function(commentID, callback) {
+    
+    db.comments.remove({_id:mongojs.ObjectId(commentID)}, function(error) {
+        if (error) throw error;
+        
+        callback(true);
     });
 };
 

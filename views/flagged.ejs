@@ -1,0 +1,40 @@
+<% include chunks/head %>
+
+
+
+
+<div class="category">
+    <h1>Users</h1>
+    <h2>FLAGGED COMMENTS</h2>
+    
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Comment</th>
+            <th>Page Id</th>
+            <% if (session != null) { 
+                if (session.admin) { %>
+                <th>Ban Status</th>
+                <th>Admin Status</th>
+            <% }} %>
+        </tr>
+    
+
+
+        <% comments.forEach(function(comment) { %>
+            <tr>
+                <% if (comment.flag) { %>
+                    <td><%=comment.username%></td>
+                    <td><%=comment.text%></td>
+                    <td><%=comment.postid%></td>
+                    <td><li id="delete"> -- <a href="/deletecomment/<%=comment._id%>">DELETE</a></li></td>
+                <% } %>
+            </tr>
+        <% }); %>
+    </table>
+</div>
+
+
+<% include chunks/create_page %>
+<% include chunks/nav %>
+<% include chunks/foot %>
