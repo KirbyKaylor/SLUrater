@@ -10,7 +10,6 @@
         <tr>
             <th>Username</th>
             <th>Comment</th>
-            <th>Page Id</th>
             <% if (session != null) { 
                 if (session.admin) { %>
                 <th>Ban Status</th>
@@ -25,8 +24,7 @@
                 <% if (comment.flag) { %>
                     <td><%=comment.username%></td>
                     <td><%=comment.text%></td>
-                    <td><%=comment.postid%></td>
-                    <td><li id="delete"> -- <a href="/deletecomment/<%=comment._id%>">DELETE</a></li></td>
+                    <td><li id="delete"> - <a href="/deletecomment/<%=comment._id%>">DELETE</a></li></td>
                 <% } %>
             </tr>
         <% }); %>
