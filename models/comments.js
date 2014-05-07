@@ -46,11 +46,11 @@ module.exports.deleteComment = function(commentID, callback) {
 
 
 
-// Delete all Comments
-module.exports.deleteAll = function(callback){
-    db.comments.remove({}, function(error) {
+// Delete all Comments based on username
+module.exports.deleteAllName = function(username, callback){
+    db.comments.remove({username:username}, function(error) {
         if (error) throw error;
-        callback();
+        callback(true);
     });
 };
 

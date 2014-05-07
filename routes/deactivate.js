@@ -1,4 +1,5 @@
 var users = require('../models/users');
+var comments = require('../models/comments');
 
 module.exports = function(request,response) {
     var url = request.url;
@@ -7,7 +8,9 @@ module.exports = function(request,response) {
     var username = request.body.username
     
     users.deleteUserName(userid, function() {
-        delete request.session.username;
-        response.redirect('/');
+        comments.deleteAllName(request.session.username, function() {
+            delete request.session.username;
+            response.redirect('/');
+        });   
     });
 };
