@@ -5,12 +5,13 @@
     <p><%= coursespage.description %></p>
 
     <% if (username) { %>
-    <li><a id="courses" href="/rate/31<%=coursespage._id%>">Like</a></li>
-    <li><a id="courses" href="/rate/32<%=coursespage._id%>">Dislike</a></li>
+    <input height='30px' width='30px' src="http://upload.wikimedia.org/wikipedia/commons/8/87/Symbol_thumbs_up.svg"
+           type="image" value="Like Page" onClick="window.location='/rate/31<%=coursespage._id%>'">
+    <input height='30px' width='30px' src="http://upload.wikimedia.org/wikipedia/en/2/2f/Thumbs-down-icon.png"
+           type="image" value="Dislike Page" onClick="window.location='/rate/32<%=coursespage._id%>'">
     <% }; %>
     
-    Like Ratings: <%=ratings.like%>
-    Dislike Ratings: <%=ratings.dislike%>
+    <% include chunks/ratings %>
     
     <% include chunks/comment %>
     

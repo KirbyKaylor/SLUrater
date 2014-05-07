@@ -3,14 +3,16 @@
 <div class="page">
     <h1><%= diningPage.title %></h1>
     <p><%= diningPage.description %></p>
-    
+    <p>---------------------------------------</p>
     <% if (username) { %>
-    <li><a id="dining" href="/rate/01<%=diningPage._id%>">Like</a></li>
-    <li><a id="dining" href="/rate/02<%=diningPage._id%>">Dislike</a></li>
+
+    <input height='30px' width='30px' src="http://upload.wikimedia.org/wikipedia/commons/8/87/Symbol_thumbs_up.svg"
+           type="image" value="Like Page" onClick="window.location='/rate/01<%=diningPage._id%>'">
+    <input height='30px' width='30px' src="http://upload.wikimedia.org/wikipedia/en/2/2f/Thumbs-down-icon.png"
+           type="image" value="Dislike Page" onClick="window.location='/rate/02<%=diningPage._id%>'">
+
     <% }; %>
-    
-    Like Ratings: <%=ratings.like%>
-    Dislike Ratings: <%=ratings.dislike%>
+    <% include chunks/ratings %>
     
     <% include chunks/comment %>
     
