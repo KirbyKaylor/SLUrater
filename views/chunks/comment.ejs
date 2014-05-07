@@ -11,8 +11,10 @@
             <td><%=comment.username%> commented, "<%= comment.text %>" <%= flag %></td>
             <% if (username) { %>
             <td><input id ="flag" height='30px' width='30px' src="http://www.clker.com/cliparts/e/6/a/9/1216829321427973809red_flag.svg.med.png"
-           type="image" value="flag" onClick="window.location='/flag/0<%=comment._id%>'"></td> 
-            <% } %>
+           type="image" value="flag" onClick="window.location='/flag/0<%=comment._id%>'"></td>
+            <% if (comment.username === username) { %>
+                <td><li id="delete"> - <a href="/deletecommentuser/<%=comment._id%>">delete comment</a></li></td>
+            <% }}%>
         </tr>
         <% }); %>
         

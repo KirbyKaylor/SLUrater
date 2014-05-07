@@ -37,6 +37,7 @@ app.get('/rate/:id', require('./routes/rate'));
 app.post('/comment', require('./routes/comment'));
 app.get('/adminpage', require('./routes/adminpage'));
 app.get('/deletecomment/:id', require('./routes/deletecomment'));
+app.get('/deletecommentuser/:id', require('./routes/deletecommentuser'));
 app.get('/ban/:id', require('./routes/ban'));
 app.get('/liftban/:id', require('./routes/liftban'));
 app.get('/addadmin/:id', require('./routes/addadmin'));
