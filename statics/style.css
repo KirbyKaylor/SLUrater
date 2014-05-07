@@ -142,4 +142,16 @@ textarea {
 #footer {position: relative;
 	margin-top: -150px; /* negative value of footer height */
 	height: 150px;
-	clear:both;} 
+	clear:both;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #400000;
+    padding: 6px;
+}
+
+table td, th {
+    border: 1px solid #400000;
+    padding: 6px;
+}
