@@ -12,8 +12,7 @@ module.exports.createpage = function(title, description, id, category, callback)
      db.pages.insert({
         title: title,
         description: description,
-        category: category,
-        _id: id}
+        category: category}
                 );
     
     callback(true);
