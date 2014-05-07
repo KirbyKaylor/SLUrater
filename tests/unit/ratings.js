@@ -19,7 +19,6 @@ exports[ 'rate a page' ] = function(test){
     });
 };
 
-
 // Empty the database and close the connection
 exports[ 'cleanup' ] = function(test){
     ratings.deleteAll(function(){

@@ -4,7 +4,7 @@ var comments = require('../../models/comments');
 
 // Emptying the database
 exports[ 'setup' ] = function(test){
-    comments.deleteAll(function(){
+    comments.deleteAllName('username',function(){
         test.done();                        
     });
 };
@@ -12,7 +12,7 @@ exports[ 'setup' ] = function(test){
 // Successful comment creation
 exports[ 'create a comment' ] = function(test){
     test.expect(1);            // the number of assertions you expect there to be in the test
-    comments.create('comment', 'username', 'pageid', function(success) {
+    comments.create('comment', 'pageid', 'username', function(success) {
         test.ok(success);
         test.done();
     });
@@ -22,7 +22,7 @@ exports[ 'create a comment' ] = function(test){
 // Unsuccessful comment creation
 exports[ 'unsuccessful comment creation' ] = function(test){
     test.expect(1);
-    comments.create('comment', 'bad_username','badpageid', function(success){
+    comments.create('comment', 'badpageid','bad_username', function(success){
         test.ok(!success);
         test.done();
     });
@@ -30,7 +30,7 @@ exports[ 'unsuccessful comment creation' ] = function(test){
 
 // Empty the database and close the connection
 exports[ 'cleanup' ] = function(test){
-    comments.deleteAll(function(){
+    comments.deleteAllName('username',function(){
         comments.close(function(){
             test.done();
         });
