@@ -6,6 +6,6 @@ module.exports = function(request,response) {
     var userid = url.substring(index+1);
     
     users.addAdmin(userid, function() {
-        response.redirect('users');
+        response.redirect('adminpage');
     });
 };
