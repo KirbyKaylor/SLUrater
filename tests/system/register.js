@@ -4,11 +4,11 @@ var zombie = require('zombie');
 var browser = new zombie();
 
 // Empty the database
-exports['setup'] = function(test) {
-    users.deleteAll(function() {
-        test.done();
-    });
-};
+//exports['setup'] = function(test) {
+  //  users.deleteAll(function() {
+    //    test.done();
+    //});
+//};
 
 exports['make an account (success)'] = function(test) {
     test.expect(2);
@@ -77,11 +77,21 @@ exports['log in (failure)'] = function(test) {
     });
 }
 
-// Empty the database and close the connection
-exports['cleanup'] = function(test) {
-    users.deleteAll(function() {
-        users.close(function() {
-            test.done();
-        });
+exports['Deactivate Account(success)'] = function(test) {
+    test.expect(2);
+    
+    browser.visit('http://localhost:8080/', function() {
+        test.ok(browser.query('#login'));
+        
+        browser.
+            fill('#login_name', 'username').
+            fill('#login_password', 'password').
+            pressButton('#login_submit', function() {
+                test.ok(browser.query('#deactivate'));
+                browser.clickLink('#deactivate', function() {
+                    test.done();
+                });
+            });
     });
-};
+}
+
